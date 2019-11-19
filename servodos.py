@@ -1,12 +1,12 @@
 #!/usr/bin/python
 # -*- coding: <encoding name> -*-  
+
 from Tkinter import *
 import RPi.GPIO as GPIO
 
 from functools import partial
 import time
 import os
-
 
 
 #defino GPIO INPUT o OUT#
@@ -22,9 +22,6 @@ pwm16 = GPIO.PWM(16, 80)
 pwm12.start(0)
 pwm16.start(0)
 global a
-
-
-
 
 
 #funcion guarda dato de registro de usuario     
@@ -49,7 +46,6 @@ def registro_usuario():
 
                      
 class App:
-
 
     def __init__(self, master):
         frame = Frame(master)
@@ -151,11 +147,9 @@ class App:
         segundogrado = Entry(ventanagrados, textvariable=grado2) 
         segundogrado.pack()
 
-
         boton = Button(ventanagrados, text="ok", command = nine).pack()
 
-        
-        
+         
     #funcion de ventana registro para usuario
     def registro(self):
                       
@@ -175,7 +169,6 @@ class App:
         label.pack(anchor=CENTER)
         label.config(bg="LightGreen",
                      font=("Verdana " ,24))
-
 
         label_nombre = Label(registro, text="Nombre de usuario * ")
         label_nombre.pack()
@@ -201,7 +194,3 @@ root.geometry("1000x500+0+0")
 root.update()
 root.deiconify()
 root.mainloop()
-
-
-
-
