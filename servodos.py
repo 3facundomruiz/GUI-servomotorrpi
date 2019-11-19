@@ -27,7 +27,7 @@ global a
 
 
 
-        
+#funcion guarda dato de registro de usuario     
 def registro_usuario():
  
     usuario_info = nombre_user.get()
@@ -55,26 +55,13 @@ class App:
         frame = Frame(master)
         frame.pack()
         
+        #ServoMOTOR antebrazo
         scale = Scale(frame,from_=90, to=0,
               command=self.update12,
               length=900,
                  showvalue=1, width=80, relief=RAISED, orient=HORIZONTAL
                       , label = "Servo1 antebrazo")
         scale.grid()
-
-        """
-        
-        
-        
-
-        imagen=PhotoImage(file="foto.gif")
-        
-        lblImagen=Label(frame,image=imagen).place(x=100,y=100)
-        """
-        
-
-        
-
 
         
         G = Button(frame, text ="Grado",command = self.ingresargrado)
@@ -89,69 +76,12 @@ class App:
         repeinput = Entry(frame, width=10, selectborderwidth=10)
         repeinput.place(x=150, y=125)
 
-
-
-        """
-        pwm12.ChangeDutyCycle(6)  # turn towards 0 degree
-        time.sleep(1) # sleep 1 second
-        pwm12.ChangeDutyCycle(3) # turn towards 180 degree
-        time.sleep(1) # sleep 1 second
-        pwm12.ChangeDutyCycle(3.5) # turn towards 180 degree
-        time.sleep(1) # sleep 1 second
-        pwm12.ChangeDutyCycle(4) # turn towards 180 degree
-        time.sleep(1) # sleep 1 second
-        pwm12.ChangeDutyCycle(4.5) # turn towards 180 degree
-        time.sleep(1) # sleep 1 second
-        pwm12.ChangeDutyCycle(5.5) # turn towards 180 degree
-        time.sleep(1) # sleep 1 second
-        """
-
-
-        
         scale2 = Scale(frame, from_=90, to=0,
                command=self.update16,
               length=200,showvalue=1,
                        width=10, relief=RAISED, orient=HORIZONTAL, label = "Servo2 mano", tickinterval = 30)
-
-
-
-
-
-                
         scale2.grid()
-        """
 
-        scale3 = Scale(frame, from_=90, to=0,
-               command=self.update16,
-              length=200,showvalue=1,
-                       width=10, relief=RAISED, label = "Servo3")
-        scale3.grid(row=2, column=1)
-
-        scale4 = Scale(frame, from_=90, to=0,
-               command=self.update16,
-              length=200,showvalue=1,
-                       width=10, relief=RAISED, label = "Servo4")
-        scale4.grid(row=2, column=3)
-
-        scale5 = Scale(frame, from_=90, to=0,
-               command=self.update16,
-              length=200,showvalue=1,
-                       width=10, relief=RAISED, label = "Servo5")
-        scale5.grid(row=3, column=1)
-
-        scale6 = Scale(frame, from_=90, to=0,
-               command=self.update16,
-              length=200,showvalue=1,
-                       width=10, relief=RAISED, label = "Servo6")
-        scale6.grid(row=3, column=2)
-        
-        scale6 = Scale(frame, from_=90, to=0,
-               command=self.update16,
-              length=200,showvalue=1,
-                       width=10, relief=RAISED, label = "Servo7")
-        scale6.grid(row=3, column=3)
-    
-        """
 
 
 
@@ -182,6 +112,8 @@ class App:
             time.sleep(2)
             a = a+1
 
+
+    #introducir grados por teclado       
     def ingresargrado(self):
         global ventanagrados
         ventanagrados=Tk()
@@ -223,19 +155,8 @@ class App:
         boton = Button(ventanagrados, text="ok", command = nine).pack()
 
         
-
- 
         
-
-        
-
-        
-        
-
-
-        
-
-
+    #funcion de ventana registro para usuario
     def registro(self):
                       
         global registro
