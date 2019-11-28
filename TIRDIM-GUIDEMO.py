@@ -61,10 +61,7 @@ class App:
         """
 
 
-        
-
-
-    #introducir grados por teclado       
+              
     def ingresargrado(self):
         global indicaciones
         indicaciones=Tk()
@@ -94,7 +91,6 @@ class App:
 
         
         
-    #funcion de ventana  para usuario
     def sn(self):
                       
         global instagram
@@ -188,51 +184,8 @@ class App:
         pwm12.ChangeDutyCycle(duty) 
 
 
-
-
-        
-
-
-
-
-
-
-
-        
-        """
-        global nombre_user
-        global clave_user
-        global nombre_apellido
-        global clave
-        nombre_user = StringVar()
-        clave_user = StringVar()
-
-        label = Label(registro, text= "Introduzca sus datos")
-        label.pack(anchor=CENTER)
-        label.config(bg="LightGreen",
-                     font=("Verdana " ,24))
-
-
-        label_nombre = Label(registro, text="Nombre de usuario * ")
-        label_nombre.pack()
-
-        nombre_apellido = Entry(registro, textvariable=nombre_user) #ESPACIO PARA INTRODUCIR EL NOMBRE.
-        nombre_apellido.pack()
-
-        label_clave = Label(registro, text="Clave * ")
-        label_clave.pack()
-
-        clave = Entry(registro, textvariable=clave_user, show='*') #ESPACIO PARA INTRODUCIR EL NOMBRE.
-        clave.pack()
-
-        Label(registro, text="").pack
-
-        Button(registro, text="Registrarse", width=10, height=1, bg="LightGreen", command = registro_usuario).pack()
-"""
                              
 root = Tk()
-
-
 
 myimage = PhotoImage(file='/home/pi/Desktop/tirdim/mmm.png')
 mylabel = Label(root, image=myimage)
@@ -241,21 +194,6 @@ mylabel.place(x=0, y=0)
 myimage2 = PhotoImage(file='/home/pi/Desktop/tirdim/foto.gif')
 mylabel = Label(root, image=myimage2)
 mylabel.pack()
-
-
-
-
-
-"""
-imagenAnchuraMaxima=300
-imagenAlturaMaxima=200
-
-myimage2 = PhotoImage(file='/home/pi/Desktop/tirdim/insta.png')
-myimage2.geometry(10x10)
-mylabel = Label(root, image=myimage2)
-mylabel.pack(side=TOP)
-"""
-
 
 root.wm_title('Servo Control')
 appservo = App(root)
